@@ -1,26 +1,33 @@
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.card {
-    display: flex;
-    width: 250px;
-    border: 1px solid rgba(146, 146, 146, 0.555);
-    background-color: rgba(255, 255, 255, 0.658);
-    flex-direction: column;
-    margin: 30px;
-    border-radius: 4px;
-    padding: 15px;
-    text-align: left;
+hr {
+    color: rgba(0, 0, 255, 0.404);
+    border-width: 1.5px;
+    border-style: solid;
+    margin: 40px 0;
 }
 
-section#what-we-do {
-    height: 300px;
-    width: 100%;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.829);
-    .card {
-        background-color: rgb(168, 168, 168);
+.card-container {
+    display: flex;
+    justify-content: center;
+    // overflow: hidden;
+}
+.card {
+    min-width: 180px;
+    border: 1px solid rgba(146, 146, 146, 0.555);
+    background-image: url("/assets/camera1.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: 30px;
+    border-radius: 4px;
+    text-align: left;
+    height: 200px;
+}
+
+section#main {
+    width: 80%;
+    margin: 0 auto;
+    h2 {
+        font-size: 2rem;
+        color: rgb(34, 0, 34);
     }
+
 }
