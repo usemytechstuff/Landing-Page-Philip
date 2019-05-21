@@ -11,23 +11,71 @@ hr {
     // overflow: hidden;
 }
 .card {
-    min-width: 180px;
+    min-width: 185px;
     border: 1px solid rgba(146, 146, 146, 0.555);
     background-image: url("/assets/camera1.jpg");
     background-position: center;
     background-size: cover;
-    margin: 30px;
+    margin: 24px;
     border-radius: 4px;
     text-align: left;
-    height: 200px;
+    height: 185px;
 }
 
 section#main {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     h2 {
         font-size: 2rem;
-        color: rgb(34, 0, 34);
+        color: #303036;
     }
 
+}
+
+section#about-us {
+    width: 90%;
+    margin: 0 auto;
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+
+    }
+    div.about-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div.about-img {
+            background-image: url(/assets/about.jpg);
+            background-position: center;
+            background-size: cover;
+            min-width: 440px;
+            height: 319px;
+            margin: 0;
+
+        }
+        p {
+            font-size: 1.5rem;
+            color: #484752;
+            margin: 20px;
+        }
+    }
+}
+
+footer {
+    margin-top: 30px;
+    background-color: #303036;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        font-size: 2rem;
+        color: white;
+        margin: 10px;
+    }
+    h4 {
+        color: white;
+        margin: 10px;
+        font-size: 1rem;
+        margin-left: 10%;
+    }
 }
