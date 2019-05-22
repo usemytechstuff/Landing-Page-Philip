@@ -132,13 +132,15 @@ html {
 }
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   height: 75px;
   align-items: center;
-  max-width: 100%;
-  position: inherit;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
+}
+nav .menu-button {
+  display: none;
 }
 nav input.nav-input {
   background: rgba(255, 255, 255, 0.568) url(/assets/magnifying-glass.png) 5% no-repeat;
@@ -146,27 +148,54 @@ nav input.nav-input {
   padding-left: 30px;
   height: 25px;
   border-radius: 3px;
+  margin-left: 20px;
+  justify-self: flex-start;
+}
+nav div.menu {
+  justify-self: flex-end;
 }
 nav a.link {
   padding: 15px;
   text-decoration: none;
   color: white;
 }
-nav a.logo {
-  padding: 15px;
-  text-decoration: none;
-  margin: 0 20% 0 20%;
+@media  (max-width: 900px) {
+  nav .menu-button {
+    display: block;
+    cursor: pointer;
+  }
+  nav .menu {
+    position: absolute;
+    top: 75px;
+    left: -1500px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(8, 8, 8, 0.897);
+    transition: left 900ms ease-in-out;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+  }
+  nav .menu a {
+    font-size: 2rem;
+  }
+  nav .menu--open {
+    transition: left 900ms ease-in-out;
+    left: 0;
+  }
 }
 #home {
   width: 100%;
   height: 700px;
   background-image: url('/assets/header.jpg');
   background-size: cover;
-  background-position-y: 50%;
+  background-position-y: 30%;
   background-attachment: fixed;
 }
 #home div.opacity {
-  background-color: rgba(61, 61, 61, 0.884);
+  background-color: rgba(97, 97, 97, 0.877);
   height: 100%;
   width: 100%;
 }
@@ -178,6 +207,10 @@ nav a.logo {
   width: 100%;
   height: 90%;
   padding: 25px;
+}
+#home header .logo {
+  padding: 15px;
+  width: 100px;
 }
 #home header h1 {
   font-size: 2.5rem;
@@ -203,6 +236,7 @@ hr {
 .card-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .card {
   min-width: 185px;
@@ -241,6 +275,7 @@ section#about-us div.about-content div.about-img {
   background-position: center;
   background-size: cover;
   min-width: 440px;
+  max-width: 100%;
   height: 319px;
   margin: 0;
 }
@@ -248,6 +283,11 @@ section#about-us div.about-content p {
   font-size: 1.5rem;
   color: #484752;
   margin: 20px;
+}
+@media  (max-width: 900px) {
+  section#about-us div.about-content {
+    flex-direction: column;
+  }
 }
 footer {
   margin-top: 30px;
@@ -270,7 +310,7 @@ footer h4 {
 section#who-header {
   width: 100%;
   height: 500px;
-  background-image: url('/assets/header.jpg');
+  background-image: url('/assets/team.jpg');
   background-size: cover;
   background-position-y: 50%;
   background-attachment: fixed;
@@ -297,12 +337,8 @@ section#who-header header h1 {
   max-width: 450px;
   text-align: center;
 }
-section#who-header header button {
-  border-radius: 3px;
-  padding: 12px 22px;
-  background-color: #c4c4c4;
-  border: 1px solid #3b3b3b;
-  font-size: 1.2rem;
+section#who-header header .logo {
+  width: 50px;
 }
 section#who {
   margin: 0 auto;
@@ -315,6 +351,7 @@ section#who h2 {
 section#who div.tabs-links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 section#who div.tabs-links .tabs-link {
   padding: 15px 20px;
@@ -323,6 +360,13 @@ section#who div.tabs-links .tabs-link {
   border-radius: 30px;
   cursor: pointer;
 }
+@media (max-width: 450px) {
+  section#who div.tabs-links .tabs-link {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+}
 section#who div.tabs-links .active-tab {
   border: 3px solid black;
 }
@@ -330,9 +374,24 @@ section#who .team-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
 }
-.tabs-item-selected {
-  display: block;
+section#who .team-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  background-color: #f5f5f5;
+  box-shadow: none;
+}
+section#who .team-container img {
+  width: 150px;
+  opacity: 0.8;
+  border-radius: 100px;
+}
+section#who .team-container h3 {
+  margin-top: 4px;
 }
 @font-face {
   font-family: 'Nunito';

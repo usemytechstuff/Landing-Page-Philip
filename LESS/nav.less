@@ -1,12 +1,15 @@
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     height: 75px;
     align-items: center;
-    max-width: 100%;
-    position: inherit;
+    width: 100%;
+    // background-color: rgba(0, 0, 0, 0.603);
     margin: 0 auto;
     padding: 20px;
+    .menu-button {
+        display: none;
+    }
 
     input.nav-input {
         background: rgba(255, 255, 255, 0.568) url(/assets/magnifying-glass.png) 5% no-repeat;
@@ -14,6 +17,11 @@ nav {
         padding-left: 30px;
         height: 25px;
         border-radius: 3px;
+        margin-left: 20px;
+        justify-self: flex-start;
+    }
+    div.menu {
+        justify-self: flex-end;
     }
     a.link {
         padding: 15px;
@@ -21,10 +29,33 @@ nav {
         color: white;
 
     }
-    a.logo {
-        padding: 15px;
-        text-decoration: none;
-        margin: 0 20% 0 20%;
-    }
+    @media @tablet {
+        .menu-button {
+            display: block;
+            cursor: pointer;
+        }
+        .menu {
+            position: absolute;
+            top: 75px;
+            left: -1500px;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(8, 8, 8, 0.897);
+            transition: left 900ms ease-in-out;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            a {
+                font-size: 2rem;
+            }
+          }
+          .menu--open {
+            transition:  left 900ms ease-in-out;
+            left:0;
 
+          }
+
+    }
 }

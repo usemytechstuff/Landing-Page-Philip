@@ -1,7 +1,7 @@
 section#who-header {
     width: 100%;
     height: 500px;
-    background-image: url('/assets/header.jpg');
+    background-image: url('/assets/team.jpg');
 
     background-size: cover;
     background-position-y: 50%;
@@ -29,13 +29,8 @@ section#who-header {
             max-width: 450px;
             text-align: center;
         }
-        button {
-            border-radius: 3px;
-            padding: 12px 22px;
-
-            background-color: rgb(196, 196, 196);
-            border: 1px solid rgb(59, 59, 59);
-            font-size: 1.2rem;
+        .logo {
+            width: 50px;
         }
     }
 }
@@ -50,12 +45,18 @@ section#who {
     div.tabs-links  {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         .tabs-link {
             padding: 15px 20px;
             margin: 5px;
             border: 1px solid black;
             border-radius: 30px;
             cursor: pointer;
+        @media @mobile {
+            padding: 10px 15px;
+            font-size: .8rem;
+            font-weight: 800;
+        }
 
         }
         .active-tab {
@@ -66,11 +67,32 @@ section#who {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        position: relative;
+        .card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2px;
+            background-color: rgb(245, 245, 245);
+            box-shadow: none;
+
+        }
+        img {
+
+           width: 150px;
+           opacity: .8;
+           border-radius: 100px;
+        }
+        h3 {
+            margin-top: 4px;
+        }
     }
 
 }
 
-.tabs-item-selected {
-    display: block;
-  }
+// .tabs-item-selected {
+//     display: block;
+//     transition: display 400ms ease;
+//   }
 
