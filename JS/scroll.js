@@ -3,17 +3,17 @@
  const rightButton = document.querySelector('button.right');
  const leftButton = document.querySelector('button.left');
  const categorieDiv = document.querySelector('div.categories .card-container');
- rightButton.addEventListener('mouseover', function(){
+ rightButton.addEventListener('click', function(){
    setInterval(categorieDiv.scrollBy({
      top: 0,
-     left: 200,
+     left: 500,
      behavior: 'smooth'
    }),0);
  })
- leftButton.addEventListener('mouseover', function(){
+ leftButton.addEventListener('click', function(){
    return categorieDiv.scrollBy({
      top: 0,
-     left: -200,
+     left: -500,
      behavior: 'smooth'
    });
  })

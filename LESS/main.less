@@ -11,6 +11,10 @@ div.selector {
         border: none;
         font-size: 1.5rem;
         outline: none;
+        transition: font-size 700ms ease;
+        &:hover {
+            font-size: 1.8rem;
+        }
         @media @tablet {
             display: none;
         }
@@ -26,6 +30,7 @@ div.selector {
 
     @media @tablet {
         flex-wrap: wrap;
+        justify-content: center;
     }
     .card-container::-webkit-scrollbar-button {
         color: red;
@@ -34,7 +39,7 @@ div.selector {
 }
 .card {
     min-width: 185px;
-    // border: 1px solid rgba(146, 146, 146, 0.555);
+    opacity: .4;
     background-color: rgb(214, 214, 214);
     background-position: center;
     background-size: cover;
@@ -52,11 +57,14 @@ section#main {
     h2 {
         font-size: 2rem;
         color: #303036;
+        @media @tablet {
+            text-align: center;
+        }
     }
     div.categories {
         .card {
             height: 250px;
-            opacity: .5;
+            opacity: .7;
             display: flex;
             justify-content: center;
             align-items: flex-end;
@@ -71,23 +79,35 @@ section#main {
                 text-align: center;
             }
         }
-        .camera {
-            background-image: url('/assets/categories/cameras.jpg');
+    }
+    div.top-rated {
+        @media @mobile {
+            display: none;
         }
-        .computer {
-            background-image: url('/assets/categories/computers.jpg');
+    }
+    div.recommended {
+        @media @mobile {
+            display: none;
         }
-       .drone {
-        background-image: url('/assets/categories/drones.jpg');
-        }
-        .headphones {
-            background-image: url('/assets/categories/headphones.jpg');
-        }
-        .projector {
-            background-image: url('/assets/categories/projector.jpg');
-        }
- }
-
+    }
+ .camera {
+    background-image: url('/assets/categories/cameras.jpg');
+}
+.computer {
+    background-image: url('/assets/categories/computers.jpg');
+}
+.drone {
+background-image: url('/assets/categories/drones.jpg');
+}
+.headphones {
+    background-image: url('/assets/categories/headphones.jpg');
+}
+.projector {
+    background-image: url('/assets/categories/projector.jpg');
+}
+.gear {
+    background-image: url('/assets/categories/gear.jpg');
+}
 }
 
 
@@ -110,6 +130,7 @@ section#about-us {
             background-position: center;
             background-size: cover;
             min-width: 50%;
+            opacity: 1;
         }
         p {
             font-size: 1.5rem;

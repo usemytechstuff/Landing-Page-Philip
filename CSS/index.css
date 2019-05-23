@@ -150,6 +150,7 @@ nav input.nav-input {
   border-radius: 3px;
   margin-left: 20px;
   justify-self: flex-start;
+  font-family: 'Nunito';
 }
 nav div.menu {
   justify-self: flex-end;
@@ -221,7 +222,7 @@ nav a.link:hover {
 }
 @media (max-width: 500px) {
   #home header .logo {
-    width: 350px;
+    width: 300px;
   }
 }
 #home header h1 {
@@ -241,6 +242,7 @@ nav a.link:hover {
   font-size: 1.3rem;
   font-weight: 700;
   transition: background-color 800ms ease, color 400ms ease;
+  outline: none;
 }
 #home header button:hover {
   background-color: rgba(70, 0, 128, 0.795);
@@ -260,6 +262,10 @@ div.selector button {
   border: none;
   font-size: 1.5rem;
   outline: none;
+  transition: font-size 700ms ease;
+}
+div.selector button:hover {
+  font-size: 1.8rem;
 }
 @media  (max-width: 900px) {
   div.selector button {
@@ -274,6 +280,7 @@ div.selector button {
 @media  (max-width: 900px) {
   .card-container {
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .card-container .card-container::-webkit-scrollbar-button {
@@ -281,6 +288,7 @@ div.selector button {
 }
 .card {
   min-width: 185px;
+  opacity: 0.4;
   background-color: #d6d6d6;
   background-position: center;
   background-size: cover;
@@ -298,9 +306,14 @@ section#main h2 {
   font-size: 2rem;
   color: #303036;
 }
+@media  (max-width: 900px) {
+  section#main h2 {
+    text-align: center;
+  }
+}
 section#main div.categories .card {
   height: 250px;
-  opacity: 0.5;
+  opacity: 0.7;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -315,20 +328,33 @@ section#main div.categories .card h3 {
   width: 100%;
   text-align: center;
 }
-section#main div.categories .camera {
+@media (max-width: 500px) {
+  section#main div.top-rated {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  section#main div.recommended {
+    display: none;
+  }
+}
+section#main .camera {
   background-image: url('/assets/categories/cameras.jpg');
 }
-section#main div.categories .computer {
+section#main .computer {
   background-image: url('/assets/categories/computers.jpg');
 }
-section#main div.categories .drone {
+section#main .drone {
   background-image: url('/assets/categories/drones.jpg');
 }
-section#main div.categories .headphones {
+section#main .headphones {
   background-image: url('/assets/categories/headphones.jpg');
 }
-section#main div.categories .projector {
+section#main .projector {
   background-image: url('/assets/categories/projector.jpg');
+}
+section#main .gear {
+  background-image: url('/assets/categories/gear.jpg');
 }
 section#about-us {
   width: 90%;
@@ -348,6 +374,7 @@ section#about-us div.about-content div.about-img {
   background-position: center;
   background-size: cover;
   min-width: 50%;
+  opacity: 1;
 }
 section#about-us div.about-content p {
   font-size: 1.5rem;
@@ -386,7 +413,7 @@ section#who-header {
   background-attachment: fixed;
 }
 section#who-header div.opacity {
-  background-color: rgba(61, 61, 61, 0.884);
+  background-color: rgba(65, 65, 87, 0.842);
   height: 100%;
   width: 100%;
 }
@@ -454,10 +481,11 @@ section#who .team-container .card {
   border-radius: 2px;
   background-color: #f5f5f5;
   box-shadow: none;
+  opacity: 1;
 }
 section#who .team-container img {
   width: 150px;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 100px;
 }
 section#who .team-container h3 {
