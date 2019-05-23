@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
     <script defer="defer" src="/JS/menu.js"></script>
+    <script defer="defer" src="/JS/scroll.js"></script>
     <title>Use My Tech Stuff</title>
 </head>
 <body>
@@ -24,7 +25,6 @@
                <img class="menu-button" src="./assets/menu.png"/>
 
                <div class="menu">
-                   <a href="#" class="link">Equipment</a>
                    <a href="about.html" class="link">Who we are</a>
                    <a href="#" class="link">Signup</a>
                    <a href="#" class="link">Login</a>
@@ -32,16 +32,30 @@
               </nav>
 
            <header>
-             <img class="logo" src="/assets/samplelogo.svg" alt="">
-             <h1>Earn thousands/month for your equipment</h1>
-             <button>Join now</button>
+             <img class="logo" src="/assets/Rentech.svg" alt="">
+             <h1>Earn cash for your equipment</h1>
+             <button>Let's Go!</button>
            </header>
        </div>
 
    </section>
    <section id="main">
         <hr class="main-seperator">
-       <div class="top-rated">
+        <div class="categories">
+                <h2>Categories</h2>
+                    <div class="selector">
+                        <button class="left"><i class="fas fa-arrow-left"></i></button>
+                        <div class="card-container">
+                           <div class="card camera"><h3>Cameras</h3></div>
+                           <div class="card computer"><h3>Computers</h3></div>
+                           <div class="card drone"><h3>Drones</h3></div>
+                           <div class="card headphones"><h3>Headphones</h3></div>
+                           <div class="card projector"><h3>Projectors</h3></div>
+                        </div>
+                        <button class="right"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+            </div>
+        <div class="top-rated">
 
            <h2>Top Rated</h2>
             <div class="card-container">
@@ -49,30 +63,18 @@
                <div class="card"></div>
                <div class="card"></div>
                <div class="card"></div>
-
            </div>
         </div>
-           <div class="recommended">
-
-                <h2>Recommended for you</h2>
-                 <div class="card-container">
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                    <div class="card"></div>
-                </div>
-            </div>
-                <div class="categories">
-
-                        <h2>Categories</h2>
-                         <div class="card-container">
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                            <div class="card"></div>
-                        </div>
-                    </div>
-                 <hr class="main-seperator">
+        <div class="recommended">
+            <h2>Recommended for you</h2>
+             <div class="card-container">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+             </div>
+        </div>
+        <hr class="main-seperator">
    </section>
    <section id="about-us">
        <h2>About</h2>
@@ -85,7 +87,7 @@
     <a href="#"><i class="fab fa-facebook"></i></a>
     <a href="#"><i class="fab fa-twitter"></i></a>
     <a href="#"><i class="fab fa-instagram"></i></a>
-    <h4>Use My Tech Stuff <i class="far fa-copyright"></i> 2019</h4>
+    <h4> Rentech <i class="far fa-copyright"></i> 2019</h4>
    </footer>
 
    <!-- End Site Container -->

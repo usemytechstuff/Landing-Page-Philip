@@ -27,6 +27,10 @@ nav {
         padding: 15px;
         text-decoration: none;
         color: white;
+        transition: font-size 400ms ease;
+        &:hover {
+            font-size: 1.1rem;
+        }
 
     }
     @media @tablet {
@@ -47,8 +51,11 @@ nav {
             flex-direction: column;
             align-items: center;
             padding-top: 50px;
-            a {
+            a.link {
                 font-size: 2rem;
+                &:hover {
+                    font-size: 2.3rem;
+                }
             }
           }
           .menu--open {
