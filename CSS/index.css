@@ -159,10 +159,10 @@ nav a.link {
   padding: 15px;
   text-decoration: none;
   color: white;
-  transition: font-size 400ms ease;
+  transition: color 400ms ease;
 }
 nav a.link:hover {
-  font-size: 1.1rem;
+  color: #b861b8;
 }
 @media  (max-width: 900px) {
   nav .menu-button {
@@ -186,9 +186,6 @@ nav a.link:hover {
   nav .menu a.link {
     font-size: 2rem;
   }
-  nav .menu a.link:hover {
-    font-size: 2.3rem;
-  }
   nav .menu--open {
     transition: left 900ms ease-in-out;
     left: 0;
@@ -199,7 +196,6 @@ nav a.link:hover {
   height: 700px;
   background-image: url('/assets/header.jpg');
   background-size: cover;
-  background-position-y: 30%;
   background-attachment: fixed;
 }
 #home div.opacity {
@@ -262,10 +258,10 @@ div.selector button {
   border: none;
   font-size: 1.5rem;
   outline: none;
-  transition: font-size 700ms ease;
+  transition: color 700ms ease;
 }
 div.selector button:hover {
-  font-size: 1.8rem;
+  color: #db00f8;
 }
 @media  (max-width: 900px) {
   div.selector button {
@@ -363,6 +359,7 @@ section#about-us {
 section#about-us h2 {
   font-size: 2rem;
   margin-bottom: 25px;
+  text-align: center;
 }
 section#about-us div.about-content {
   display: flex;
